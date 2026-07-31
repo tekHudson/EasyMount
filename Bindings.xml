@@ -1,0 +1,3 @@
+<Bindings>
+	<Binding name="CLICK EasyMountButton:LeftButton" category="EasyMount"/>
+</Bindings>

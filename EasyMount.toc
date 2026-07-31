@@ -1,0 +1,27 @@
+## Interface: 11509
+## Title: EasyMount
+## Notes: One keybind. Scans your bags/spellbook and summons the fastest mount you actually have.
+## Author: tek
+## Version: 0.1.0
+## DefaultState: enabled
+## IconTexture: Interface\Icons\Ability_Mount_JungleTiger
+## X-Curse-Project-ID: 1633769
+## SavedVariables: EasyMountDB
+
+# Libraries
+Libs\LibStub\LibStub.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+
+# Bootstrap (namespace, event dispatch, defaults, slash command)
+EasyMount.lua
+
+# Mount database
+Data\Mounts.lua
+
+# Core
+Core\Scan.lua
+Core\Mount.lua
+
+# UI
+UI\Options.lua
