@@ -49,7 +49,7 @@ Bindings.xml       keybind hook
 
 ## Status
 
-v0.1.0 — core complete and statically validated (all files load cleanly under
+v0.0.1 — core complete and statically validated (all files load cleanly under
 `luajit`). **Not yet exercised in-game.** Bag scanning reuses HoneyLock's
 verified `C_Container` pattern, but the Riding-skill lookup
 (`GetNumSkillLines`/`GetSkillLineInfo`, matched against the literal "Riding"
