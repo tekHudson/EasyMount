@@ -6,6 +6,13 @@ This project follows [Keep a Changelog](https://keepachangelog.com) and
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-07-31
+### Fixed
+- Removed the visible 32x32 draggable mount-button icon; the secure button
+  is now invisible (no textures) and works purely as a keybind target.
+### Verified
+- Confirmed working in-game.
+
 ## [0.0.1] - 2026-07-31
 ### Added
 - Initial build: one keybind that scans your bags (item-based mounts) and
