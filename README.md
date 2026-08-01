@@ -17,9 +17,9 @@ can actually use, on one key.
 
 ## Design
 
-- **No XML** except `Bindings.xml`. A single `SecureActionButtonTemplate`
-  drives the keybind; macro text handles dismount vs. summon so it works in
-  combat lockdown.
+- **No XML** except `Bindings.xml`. A single, invisible `SecureActionButtonTemplate`
+  drives the keybind (no textures, so nothing renders on screen); macro text
+  handles dismount vs. summon so it works in combat lockdown.
 - **No Ace3 / minimal libs.** `LibStub` + `LibDataBroker-1.1` + `LibDBIcon-1.0`
   for the minimap icon only.
 - **Rescans on `BAG_UPDATE`** (debounced) and riding-skill change, not on
@@ -51,11 +51,14 @@ Bindings.xml       keybind hook
 
 v0.0.1 — core complete and statically validated (all files load cleanly under
 `luajit`). **Not yet exercised in-game.** Bag scanning reuses HoneyLock's
-verified `C_Container` pattern, but the Riding-skill lookup
-(`GetNumSkillLines`/`GetSkillLineInfo`, matched against the literal "Riding"
-skill name) has no prior art elsewhere in this workspace and should be the
-first thing checked in-game, along with the secure macro actually mounting
-correctly for both an item-based mount and a Paladin/Warlock spell mount.
+verified `C_Container` pattern, but two things have no prior art elsewhere in
+this workspace and should be the first checked in-game:
+- the Riding-skill lookup (`GetNumSkillLines`/`GetSkillLineInfo`, matched
+  against the literal "Riding" skill name)
+- the secure button's `type1`/`macrotext1` macro attributes actually
+  mounting correctly for both an item-based mount and a Paladin/Warlock
+  spell mount (HoneyLock/PallySquire use plain `type`/`item`/`spell`
+  attributes, not `macrotext`, so this addon is the first to lean on it)
 
 Classic Era / Season of Discovery only. TBC Anniversary support may follow
 later.
