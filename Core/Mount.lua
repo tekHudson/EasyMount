@@ -107,6 +107,10 @@ function EM:InitMount()
 	-- "ActionButtonUseKeyDown" CVar; pin it so the button always fires on
 	-- mouse-up regardless (same fix HoneyLock/PallySquire needed).
 	btn:SetAttribute("useOnKeyDown", false)
+	-- Warlocks only: drop demon form before the secure click resolves, so a
+	-- keypress while shapeshifted mounts on the first press instead of
+	-- erroring. See Core/DemonForm.lua.
+	btn:SetScript("PreClick", function() EM:DropDemonFormForMount() end)
 
 	EM.button = btn
 	EM:RegisterEvent("PLAYER_REGEN_ENABLED")

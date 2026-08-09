@@ -6,6 +6,12 @@ This project follows [Keep a Changelog](https://keepachangelog.com) and
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-09
+### Added
+- Warlock: drop Demon Form automatically so the mount keybind works on the
+  first press instead of erroring for being shapeshifted (previously only
+  handled if HoneyLock happened to also be loaded). Toggle in options.
+
 ## [1.0.0] - 2026-07-31
 ### Fixed
 - Removed the visible 32x32 draggable mount-button icon; the secure button

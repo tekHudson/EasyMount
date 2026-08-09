@@ -42,6 +42,7 @@ can actually use, on one key.
 EasyMount.lua      bootstrap: namespace, event dispatch, defaults, slash command
 Data\Mounts.lua    Classic Era / SoD mount database (item + spell IDs)
 Core\Scan.lua      bag + spellbook scan -> EM.activeMounts, debounced rescans
+Core\DemonForm.lua Warlock: drop Demon Form so mounting doesn't error
 Core\Mount.lua     fastest-mount selection + secure button/macro
 UI\Options.lua     minimap icon + enable/disable panel
 Bindings.xml       keybind hook

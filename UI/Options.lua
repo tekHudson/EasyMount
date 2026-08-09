@@ -93,6 +93,13 @@ function EM:CreateOptions()
 		end, y)
 	y = y - 34
 
+	if EM.class == "WARLOCK" then
+		local demonFormCheck = makeCheck(panel, "Drop Demon Form to mount", 1, 1, 1,
+			function() return EM.db.dropDemonFormToMount end,
+			function(checked) EM.db.dropDemonFormToMount = checked end, y)
+		y = y - 34
+	end
+
 	local header = panel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
 	header:SetPoint("TOPLEFT", 16, y)
 	header:SetText("Detected mounts (uncheck to exclude from selection)")

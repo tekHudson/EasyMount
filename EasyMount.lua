@@ -26,6 +26,7 @@ EM.player = nil
 local DEFAULTS = {
 	disabled = {},        -- [mountID] = true for mounts the player has turned off
 	minimap = { hide = false },
+	dropDemonFormToMount = true, -- Warlock only; see Core/DemonForm.lua
 }
 
 local function mergeDefaults(db, defaults)
@@ -94,6 +95,7 @@ function EM:PLAYER_LOGIN()
 	_, EM.class = UnitClass("player")
 
 	EM:InitScan()   -- Core/Scan.lua: builds EM.activeMounts, wires rescan events
+	EM:InitDemonForm() -- Core/DemonForm.lua: Warlock demon-form drop-to-mount
 	EM:InitMount()  -- Core/Mount.lua: creates the secure button, configures it
 	EM:InitOptions() -- UI/Options.lua: minimap icon + options panel
 
