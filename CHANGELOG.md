@@ -6,6 +6,11 @@ This project follows [Keep a Changelog](https://keepachangelog.com) and
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-09-17
+### Changed
+- CI: release zips are no longer suffixed with the packager's automatic
+  game-flavor label (e.g. `-classic`).
+
 ## [1.1.0] - 2026-08-09
 ### Added
 - Warlock: drop Demon Form automatically so the mount keybind works on the
